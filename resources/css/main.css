@@ -3,11 +3,11 @@
 body{
   background-color: #E9EBEE;
 }
+
 #my-nav{
   color: white;
   background-color: #4267b2;
 }
-
 #my-nav a {
   color: white !important;
 }
@@ -19,8 +19,21 @@ body{
   font-size: 20px;
   margin: 0 3px 0 3px;
 }
-.down{
-  margin-top: 20px;
+.side-bar{
+  background-color: #E9EBEE;
+  margin-top: 70px;
+  margin-left: -50px;
+}
+.material-icons{
+  font-size: 20px;
+  color: #0D1325;
+}
+.color{
+  color:red;
+  margin-left: -5px;
+}
+.colour{
+  color:red;
 }
 .footer{
   height:42px;
@@ -29,12 +42,39 @@ body{
 .list-heading{
   padding: 20px 15px 0 15px;
 }
+.hei{
+  height: 10px;
+}
 .post-section, .ads{
   margin-top: 70px;
-  height: 1050px;
+
   overflow: scroll;
 }
 
+#brand{
+  color: white;
+}
+#facebook-icon{
+  margin-left: 50px;
+  font-size: 25px;
+  margin-top: -2px;
+}
+.photo{
+  border-radius: 50%;
+  height: 30px;
+  width:30px;
+  margin-right: 2px;
+  margin-left: -10px;
+}
+.fa{
+  margin-right: 10px;
+  font-size: 30px;
+}
+.pic{
+  height: 20px;
+  width:20px;
+  margin-right: 10px;
+}
 .post-section::-webkit-scrollbar {
   display: none;
 }
@@ -43,6 +83,9 @@ body{
 }
 .panel{
   margin-bottom: 8px;
+}
+.pull-right{
+  float: right !important;
 }
 .panel-body .glyphicon {
   margin-left: 10px;
@@ -53,4 +96,19 @@ body{
 }
 .image-post{
   margin-bottom: 5px;
+}
+.icons{
+  margin-left: 5px;
+}
+.comment-box{
+  width:100% ;
+  border-radius: 10px;
+  height: 32px;
+  color: grey;
+  border: 0;
+}
+.comment-box:focus{
+  border: none !important;
+  box-shadow: none !important;
+  outline: none;
 }
