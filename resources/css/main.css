@@ -284,7 +284,13 @@
     width: 40px;
     margin-left: 10px;
     margin-right: 10px;
-    border-color: black !important;
+}
+.dp{
+  border-radius: 50px;
+  height: 15px;
+  width: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .panel-footer{
   border: 0 !important;
