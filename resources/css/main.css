@@ -1,115 +1,270 @@
-
-
-body{
+.color-body{
   background-color: #E9EBEE;
 }
+.container{
+  background-color: #E9EBEE !important;
+  margin-left: 20px !important;
+}
+.vertical-line {
 
-#my-nav{
+    border-right: thin solid #9A9EA5;
+    margin-left: 5px;
+
+}
+#update {
+
+    width: 448px !important;
+    height: 71px !important;
+    padding: 10px 12px 8px 12px !important;
+    font-size: 16px;
+    font-weight: inherit !important;
+
+}
+.btn1 {
+    border-radius: 18px;
+    border: none;
+    background-color: #F6F7F9;
+    height: 32px;
+    width: 120px;
+    margin-right: 6px;
+    font-size: 13px;
+}
+.btn2 {
+    border-radius: 18px;
+    border: none;
+    background-color: #F6F7F9;
+    height: 32px;
+    width: 140px;
+    margin-right: 6px;
+    font-size: 13px;
+}
+.btn3 {
+    border-radius: 18px;
+    border: none;
+    background-color: #F6F7F9;
+    height: 32px;
+    width: 50px;
+    margin-right: 6px;
+    font-size: 13px;
+}
+#section-1{
+  width: 240px !important;
+}
+#coloum1 b{
+  padding: 8px;
+}
+#coloum1 i{
+  padding-left: 4px;
+}
+.fa-calendar-o, .fa-newspaper-o{
+    color: #996699 !important;
+}
+.glyphicon-list-alt{
+    color: grey !important;
+}
+.fa-users, #gamesfeed-color, .fa-address-book-o, .fa-clock-o, .glyphicon-envelope, .fa-hand-o-right, .fa-comment{
+    color: #5D92FF !important;
+}
+.fa-bookmark{
+    color: #F45D72 !important;
+}
+
+.glyphicon-duplicate, .fa-file-text {
+    color: #F8A058 !important;
+}
+#footer{
+    margin-left: 20px;
+}
+.footer a{
+    padding: 0 !important;
+    color: #989CA3;
+    font-size: 15px;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+#coloum1 {
+    padding: 8px 4px;
+}
+.a{
+  padding: 8px !important;
+}
+#navigation{
   color: white;
   background-color: #4267b2;
 }
-#my-nav a {
+#navigation a{
   color: white !important;
 }
-.added-width {
-  min-width: 400px;
-}
-#darker-color span {
-  color: #0D1325 !important;
-  font-size: 20px;
-  margin: 0 3px 0 3px;
-}
-.side-bar{
-  background-color: #E9EBEE;
-  margin-top: 70px;
-  margin-left: -50px;
-}
-.material-icons{
-  font-size: 20px;
-  color: #0D1325;
-}
-.color{
-  color:red;
-  margin-left: -5px;
-}
-.colour{
-  color:red;
-}
-.footer{
-  height:42px;
-  background-color: #0f0f0f;
-}
-.list-heading{
-  padding: 20px 15px 0 15px;
-}
-.hei{
-  height: 10px;
-}
-.post-section, .ads{
-  margin-top: 70px;
-
-  overflow: scroll;
+#navigation-brand{
+  margin-top: -15px;
+  margin-left: 15px;
+  padding-right: 0 !important;
 }
 .badge{
-  margin-right: 50px;
+    background-color: #E9EBEE !important;
+    color: grey !important;
 }
-#brand{
-  color: white;
+.width-add{
+  max-width: 400px;
+   min-width: 400px;
 }
-#facebook-icon{
-  margin-left: 50px;
-  font-size: 25px;
-  margin-top: -2px;
+@media (min-width: 768px) {
+    .width-add{
+        width: 200px;
+    }
 }
-.photo{
+@media (min-width: 924px) {
+    .width-add{
+        width: 300px;
+    }
+}
+@media (min-width: 1008px) {
+    .width-add{
+        width: 350px;
+    }
+
+.fa {
+    display:inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size : inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-social {
+    font-size: 30px !important;
+    color: white;
+    padding: 10px;
+}
+@media (min-width: 1024px) and (max-width: 1125px) {
+  #contain{
+    margin-top: 10px;
+  }
+  .width-add{
+    min-width: 200px !important;
+  }
+  .form-control{
+    width: 220px;
+  }
+  #darkerColor{
+    padding-right: 200px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .width-add{
+    min-width: 250px !important;
+  }
+    #darkerColor{
+      padding-right: 200px !important;
+    }
+}
+@media (max-width: 767px) {
+  #contain{
+    margin-top: 170px !important;
+  }
+  .width-add{
+    min-width: 200px !important;
+  }
+    #darkerColor{
+      padding-right: 200px !important;
+    }
+}
+.notify-badge {
+    position: absolute;
+    right: 2px;
+    top: 10px;
+    background: red;
+    text-align: center;
+    color: white !important;
+    height: 16px;
+    width: 12px;
+    font-size: 11px !important;
+    z-index: 2;
+}
+#darkercolor{
+  position: relative;
+}
+#darkerColor{
+  padding-right: 175px;
+}
+#darkerColor img{
+  border-radius: 40%;
+}
+#darkerColor span{
+  color: #0D1325 !important;
+  font-size: 20px;
+}
+.navfont > li > a {
+    margin: -10px 0px;
+    position: relative;
+    display: block;
+    padding: 2px 15px;
+    color: black !important;
+    font-size: 13px;
+}
+.navigation-font img{
   border-radius: 50%;
-  height: 30px;
-  width:30px;
-  margin-right: 2px;
-  margin-left: -10px;
+}
+.list-heading{
+  padding: 20px 15px 0px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: grey !important;
+}
+#loadMore {
+    padding: 10px !important;
+    margin-top: 10px;
+    margin-left: 230px;
+    text-align: center;
+    background-color: #33739E;
+    color: #fff;
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    border-color: #fff;
+    box-shadow: 0 1px 1px #ccc;
+    transition: all 600ms ease-in-out;
+    -webkit-transition: all 600ms ease-in-out;
+    -moz-transition: all 600ms ease-in-out;
+    -o-transition: all 600ms ease-in-out;
+    border-radius:10%;
+}
+#loadMore:hover {
+    background-color: #fff;
+    color: #33739E;
+}
+.size{
+  padding: 0px 15px;
+  font-size: 13px;
+}
+.margin-first{
+    margin-top: 68px;
+}
+.panel{
+  margin-bottom: 8px;
+}
+.panel-body .glyphicon{
+  margin-left: 10px;
+  margin-right: 4px;
+}
+.card-margin{
+    margin-bottom: 10px !important;
+}
+.text-post{
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+.img-post{
+  margin-bottom: 15px;
 }
 .photoo{
   border-radius: 50%;
   height: 18px;
   width:18px;
-  margin-right: 10px;
   margin-left: -3px;
 }
-.fa{
-  margin-right: 10px;
-  font-size: 30px;
-}
-.images{
-  border-radius: 50%;
-  height:35px;
-  width:35px;
-  margin-right: 10px;
-  margin-left: -3px;
-}
-.post-section::-webkit-scrollbar {
-  display: none;
-}
-.ads::-webkit-scrollbar {
-  display: none;
-}
-.panel{
-  margin-bottom: 8px;
-}
-.pull-right{
-  float: right !important;
-}
-.panel-body .glyphicon {
-  margin-left: 10px;
-  margin-right: 4px;
-}
-.panel-title{
-  margin-top: 20px;
-}
-.image-post{
-  margin-bottom: 5px;
-}
-.icons{
-  margin-left: 5px;
+.img-size{
+  height:50px;
+  weight:80px;
 }
 .comment-box{
   width:100% ;
@@ -122,4 +277,117 @@ body{
   border: none !important;
   box-shadow: none !important;
   outline: none;
+}
+.size-img{
+    border-radius: 50px;
+    height:40px;
+    width: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-color: black !important;
+}
+.panel-footer{
+  border: 0 !important;
+}
+.post-section{
+  margin-left: -20px;
+}
+.ads{
+  margin-left: -20px;
+  margin-right: 15px;
+}
+.round{
+  border-radius: 50%;
+}
+.ads{
+    height: 700px;
+    }
+.post-section::-webkit-scrollbar{
+    display: none;
+}
+.ads::-webkit-scrollbar{
+    display: none;
+}
+.panel-heading{
+  background: white !important;
+}
+.media-left img{
+  border-radius: 50%;
+}
+.media-body b{
+  font-style: normal;
+}
+.like-toolkit{
+  margin: 0;
+}
+.like-comment-toolkit{
+    margin-top: 5px;
+     margin-bottom: 5px;
+}
+.like-comment-toolkit span{
+    margin-left: 5px;
+}
+.input-commentbox{
+    width: 100% ;
+    border-radius: 5px;
+    color: gray;
+    height: 32px;
+    padding-left: 10px;
+    border: none;
+}
+.input-commentbox:focus{
+    border: none !important;
+    box-shadow: none !important;
+    outline: none;
+}
+.trending{
+  color: rgb(144, 148, 156);
+  font-size: 15px;
+  color:black;
+  font-family: Helvetica,Arial,sans-serif;
+}
+.box-margin{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding:0;
+    line-height: 12px;
+  }
+  #top-trends i{
+  margin-left: -14px !important;
+}
+#politics i{
+  margin-left: -14px !important;
+}
+#sports i{
+  margin-left: -14px !important;
+}
+.active .fa-line-chart{
+  color: rgb(66,103,178);
+  font-size: 15px;
+}
+.active .fa-university{
+  color: rgb(66,103,178);
+  font-size: 15px;
+}
+.active .fa-futbol-o{
+  color: rgb(66,103,178);
+  font-size: 15px ;
+}
+.footer a{
+  height: 10px;
+  margin: 0;
+  font-size: 12px;
+  color: grey !important;
+}
+b{
+  font-style: italic;
+  font-weight: bolder;
+}
+.images{
+  border-radius: 50%;
+  height:35px;
+  width:35px;
+  margin-right: 10px;
+  margin-left: -3px;
 }
