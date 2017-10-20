@@ -50,7 +50,9 @@ body{
 
   overflow: scroll;
 }
-
+.badge{
+  margin-right: 50px;
+}
 #brand{
   color: white;
 }
@@ -66,14 +68,23 @@ body{
   margin-right: 2px;
   margin-left: -10px;
 }
+.photoo{
+  border-radius: 50%;
+  height: 18px;
+  width:18px;
+  margin-right: 10px;
+  margin-left: -3px;
+}
 .fa{
   margin-right: 10px;
   font-size: 30px;
 }
-.pic{
-  height: 20px;
-  width:20px;
+.images{
+  border-radius: 50%;
+  height:35px;
+  width:35px;
   margin-right: 10px;
+  margin-left: -3px;
 }
 .post-section::-webkit-scrollbar {
   display: none;
