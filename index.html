@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html lang="em">
+<html>
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="utf-8">
   <title>Document</title>
   <link rel="stylesheet" href="resources/vendor/css/bootstrap.css">
-
+  <link rel="stylesheet" href="resources/css/main.css">
   <link rel="stylesheet" href="resources/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="resources/css/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link  rel ="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="1.js"></script>
   <script src="resources/vendor/js/bootstrap.min.js"></script>
 </script>
 </head>
+
 <body class="color-body">
-  <nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <nav class="navbar navbar-default navbar-fixed-top" id="my-nav">
     <div class="container-fluid">
   <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -26,7 +30,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#" id="navigation-brand">
+        <a class="navbar-brand" href="https://starboyalankarartist.github.io/fb" id="brand">
         <span><i class="fa fa-facebook-official icon-social " aria-hidden="true"></i></span>
         </a>
       </div>
@@ -35,479 +39,463 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <form class="navbar-form navbar-left">
           <div class="form-group">
-            <input type="text" class="form-control width-add" placeholder="Search"><button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+            <input type="text" class="form-control added-width" placeholder="Search"><button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
           </div>
         </form>
-        <ul class="nav navbar-nav navbar-right" id="darkerColor">
-          <li><a href="#"><img class="dp"src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p160x160/22281756_143734422908472_5661405836853142890_n.jpg?oh=a1b7b54fe605361c6a10a392c6e11708&oe=5A78DBA4" height="20" width="20"> Niharika</a></li>
+        <ul class="nav navbar-nav navbar-right hidden-xs" id="darkerColor">
+          <li><a data-toggle="#" title="Profile" href="#"><img src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p160x160/22281756_143734422908472_5661405836853142890_n.jpg?oh=a1b7b54fe605361c6a10a392c6e11708&oe=5A78DBA4" height="20" width="20" alt="Person"> Niharika</a></li>
           <li><a href="#">Home</a></li>
-          <li><a href="#"><span class="notify-badge">12</span><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/423395-200.png" height="25" width="24"></a></li>
-          <li><a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADK0lEQVRoQ92a7ZENQRSG340AESADIkAEiAARkAEyIAJEwEaACBABIkAE1LPVZ6qnb09/j9t3u2p+bG33mfPM+e7dM12SdXZJODQS5IakO5JuuYefefz1QxLPV/d8dj93f89eEBS9L+mxU75FIaDeSjrvgWoFAeC5A2hRfusMQC9bgGpBrkp6KunFSO0jspD/WtLv0vfUgOD77yN+X/qu2n3E0kMXS9mzpSDEwJustH02PHExlJReAnJMCFM+C5MDmQGiCCYF8sDFxD4O0yaVmPkQO7oFQnr9IoksNdMii92OpectkI+S7s5E4OnySdK9ULcYyExxsfUtD4I/BvL9P9aKVqNTY276h0OQU7BGNIuFIDPHRmi9Vaz4IGSoX622PtK5a9aP+SAj3eqPy3rPJD1qgGRO+VuQOZeg90Feuc624b2rIwbBnMGiNS+F+SYJeOpYSW9Hh8z+1YSIzzHh9awQwmTlYDiHQuyr8Qwsd1HvfIsQHz2VfAsiBcMZPIGHql0DgVzOECcrEHyyZ232QZ5Q3zLv3IBGTWAx79AW1a4LY/gW6QHJttmedkx/NH4WQwZB6m/xiGEgIQTKENwEYsnCEq0QizF8i+BvV0re7O0JIbiQIGiBwY34fWqxj5aoxRLI/WntlA9Sm7V8CCyAy4T3WCmXQ3ksgUVaVzRr1dQRApUMQ+rDCqmWPwYzAgL4aB0pTX2WbWrutUIYslOPJcyCS6as7bW4DUQJi4Mal7CXUrH5aCNWtNdCcCpO7LKsNTA5j3zuAkYsPuoi65TnkVUBjk2IVNrrIz7ZjjKWtGvvONWZncsH3HRZW7cotTVlx49/IHoVGymL8DsKG71QbaXfG4huGd0ObulP7aaRyzm/2cy6lm0oLZJ7WwL5yQ47d4mNgBlgsmNCCcgxYYgJit4qQ8XMXwrC2Z7Bq8X16GzxBpsgkzJmBMEKjAR048VrJpDwIqIYgo0zgFDgmOF5iv+KG1KOAmFGwRXojBmymDWsS7ap0Xzd/vuBAM4GcalZekEISPx5mEKlio+yyDQAuV4r9mFIv3Y3e3QL9FiEnM4Vz5SrJkamBDCl/gHyI60zkbujRAAAAABJRU5ErkJggg==" height="22" width="20"></span></a></li>
-          <li><a href="#"><span class="notify-badge">2</span><span class="glyphicon glyphicon-globe"></span></a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span></a></li>
+          <li><a href="#"><span class="notify-badge">4</span><i class="fa fa-user-plus" aria-hidden="true" data-toggle="tooltip" title="Friend Requests" ></i></a></li>
+          <li><a href="#"><img src="https://png.icons8.com/facebook-messenger-filled/ios7/25" data-toggle="tooltip" title="Messages" width="20" height="20"></a></li>
+          <li><a href="#"><span class="notify-badge">1</span><i class="fa fa-globe" aria-hidden="true" data-toggle="tooltip" title="Notifications"></i></a></li>
+          <li><a href="#"><i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" title="Quick Help"></i></span></a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right hidden-sm hidden-lg hidden-md visible-xs-block" id="darkerColor">
+          <li><a href="#"><img src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p160x160/22281756_143734422908472_5661405836853142890_n.jpg?oh=a1b7b54fe605361c6a10a392c6e11708&oe=5A78DBA4" height="20" width="20" alt="Person"> Niharika</a></li>
+          <li><a href="#"><span class="notify-badge">6</span><i class="fa fa-user-plus" aria-hidden="true"></i></span> Friend Request</a></li>
+          <li><a href="#"><img src="https://png.icons8.com/facebook-messenger-filled/ios7/25" title="Facebook Messenger Filled" width="20" height="20"> <span style="color: black; font-size: 15px;">Messenger</span></a></li>
+          <li><a href="#"><span class="notify-badge">2</span><i class="fa fa-globe" aria-hidden="true"></i> Notifications</a></li>
+          <li><a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i></span> <span style="color: black; font-size: 15px;">Help</span></a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
      </div><!-- /.container-fluid -->
   </nav>
-  <div class="container" id="contain">
-    <article class="row margin-first">
-      <section class="col-md-3 hidden-xs hidden-sm" id="section-1">
-        <div class="side-bar">
+  <div class="container">
+    <article class="row margin-1">
+      <section class="col-md-3 hidden-xs hidden-sm">
+        <div class="nav-sec">
           <ul class="nav nav-pills nav-stacked navfont">
-            <li role="presentation"><a href="#"><img src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p160x160/22281756_143734422908472_5661405836853142890_n.jpg?oh=a1b7b54fe605361c6a10a392c6e11708&oe=5A78DBA4" height="20" width="20" class="round">    Niharika Gupta</a></li>
-            <li role="presentation"><a href="#"> <span class="glyphicon glyphicon-list-alt"></span>  News Feeds <span class="badge pull-right">9</span></a></li>
-            <li role="presentation"><a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADxElEQVRoQ+1ZO0xTURj+fiAyaAQXdSEh0dFIiU46WGljwsRjIjHGMhknSpTbOAGTacFQFo0T1Ti4KDAZtcU66KQBDKMmqJNOxcRB0/Kb0/ZCgXvvefSWguEkXXr/x/f9r3vOuYR9vmif48cBgXpn0LcMBO9ye2MjesAIEqEVKP4CZYJLAHLMyIGQLRQwn71Dq36Qr4pAcIpbm/IY4nVEiNCuA4gZq9SAVL4J09lhyunoVsoaEdgAzohSKdLGi4EcEZKmRLQJhCc4yIzZaoFvZ1wm0pceoaxONLQIhBI8REBSx4GuLAPRjEXTqnrKBEIJniEgomq4GjkGUhmLBlVsKBEIx3kMhFEVg77JMMbTMRqT2ZMS6EpwpAGYkRmqxfN1YHDBopSXbU8C5dm+6HfDqpIVjV0ooNPrneFJIBTnFBGuqzqshRwzHmVi5Np7rgTEuATjTS1AadskXHYbr+4EEjwHoEfbWQ0UvLLgRYBrgMXIpOiFjEXHnJQdCYTi3EuEWSNvAK6cAc62AZMv1C2cOg6I36sVZx1m9GViJKpiy3IjYNy8AvxId8nHyxU5iRNHgWsXUTyYTHgQdisjRwLhBIv9yCX1+JUkL5wGxvu2armRONwM9J8D+s8Dn74Do/J8v01bFFTKQDjBixV7eSUeIv2TA8CR5p3i20mILN3sKsl++Qncegr8/iN1s5S2qFOVgFYDe4G3HQoSr1eA293AyZbSvxrgi/Jpi3ZUjFsJKRMQpfDkhnPkvWIqIn71oVLkN8woEwjFeYkIHbKkCvD3BkrTw47ogwXgRMtmIzvZEOBF2YgMqC5mLGdiZB9RN9SMm7gS/I9fwON3W0dg5TSqBGkCvqyv3sQqeyAxbTragOcfgWcfnEvBiYSYNu8/q8Z9U05rjMq20Pacv78gr+FKEmLOu72oZJS0XmTFQ/tfrIJQnheb5gWg5W+AKBvVJXTEMgUPxlo6Ro6XB657IZUyUiXgg9x82qJeJzv/73ZasN0LWTA+0AgCXr3gQ1nITTDW8usIGB8phQfZRJKjMJeo+lBvuw7HOQrClDkUA02/rlVs17vZD7K6rwyH9F6oUjicYOVNnkHMSyqM4XSMlK8v9w4Bxhoa0FvTy92aZEAAB5L5Q0iafCeoWwYY+EqMlClwu0T9IVCOYvEzEhAofq1hBOy9lNjLE0F8hcmBkc2vY64un5hcSmg+X0DUL0C6zW+cgWIJECK6TacLUCavT6BcLip39zLnfjzXJTBXz3LR2k77EZ3dsKGVgd0ApOvjgIBuxPyW/wc5RoZAdT0Z8AAAAABJRU5ErkJggg==" height="22" width="22" ><span class="badge pull-right">10+</span>Messenger</a></li>
+            <li role="presentation"><a data-toggle="#" title="Niharika Gupta" href="#"><img src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p160x160/22281756_143734422908472_5661405836853142890_n.jpg?oh=a1b7b54fe605361c6a10a392c6e11708&oe=5A78DBA4" height="20" width="20" alt="Person"> Niharika Gupta</a></li>
+            <li role="presentation" class="active"><a data-toggle="#" title="News Feed" href="#"><i class="fa fa-newspaper-o" aria-hidden="true"></i></span> News Feeds <span class="badge pull-right"><b>···</b></span></a></li>
+            <li role="presentation"><a data-toggle="#" title="Messenger" href="#"><img src="https://png.icons8.com/facebook-messenger/color/24" title="Facebook Messenger" width="25" height="25"></span> Messenger </a></li>
             <p class="list-heading">Shortcuts</p>
-            <li role="presentation"><a href="#"><img src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p24x24/22196332_121444608553379_7528317298127792928_n.jpg?oh=9e54020e6240097bb5c1eb9a72e1b35b&oe=5A84AF6E" height="20" width="20" alt="story">Kuch Ankahi Khaniyann</a></li>
-            <li role="presentation"><a href="https://www.facebook.com/groups/aggarsainpublicschool/?ref=bookmarks"><img src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p100x100/20479702_502722100072114_3336104281686787646_n.jpg?oh=ad3a18f652d94ce02cdf65cc9227d811&oe=5A6DADAD" height="20" width="20" alt="Person">Confessions</a></li>
-            <li role="presentation"><a href="https://www.facebook.com/groups/324669310912980/?ref=bookmarks"><img src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p74x74/22154692_302089086863643_4721665781741512026_n.jpg?oh=2e9c301194d46d527b528c5eae54774f&oe=5A7605EB" height="20" width="20" alt="Person">Sandeep Maheswari Hopes</a></li>
-            <p class="list-heading">Explore</p>
-            <li role="presentation"><a href="https://www.facebook.com/events/upcoming?ref=46&action_history=null"><i class="fa fa-calendar-o" aria-hidden="true"></i> Events</a></li>
-            <li role="presentation"><a href="https://www.facebook.com/games/?redirect_to_gameroom=1&from_bookmark=1"><span class="glyphicon glyphicon-bookmark"></span> Games <span class="badge pull-right">20+</span></a></li>
-            <li role="presentation"><a href="https://www.facebook.com/bookmarks/lists/"><i class="fa fa-address-book-o" aria-hidden="true"></i> Friend Lists</a></li>
-            <li role="presentation"><a href="https://www.facebook.com/onthisday/?source=bookmark"><i class="fa fa-calendar" aria-hidden="true"></i> On This Day <span class="badge pull-right">2</span></a></li>
-            <li role="presentation"><a href="https://www.facebook.com/pokes"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Pokes</a></li>
-            <li role="presentation"><a href="https://www.facebook.com/pages/feed?ref=bookmarks"><span class="glyphicon glyphicon-duplicate"></span> Pages Feed <span class="badge pull-right">20+</span></a></li>
-            <p class="list-heading">Games-feed</p>
-            <li role="presentation"><a href="#"><img class="photoo" src="http://candycrush-cheats.com/wp-content/uploads/2013/06/candycrushsaga-1.png">Candy Crush</a>
+            <li role="presentation"><a data-toggle="#" title="18+ Confessions" href="#"><img src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p200x200/14079579_284025908646346_6268511855493129475_n.jpg?oh=090f346a07919e07480989b2b6cd3f7f&oe=5A8687A7" height="20" width="20" alt="Person">18+ Confessions <span class="badge pull-right">3</span></a></li>
+            <li role="presentation"><a data-toggle="#" title="Glamars" href="#"><img src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p200x200/12235119_915264528551030_7514222586405138770_n.jpg?oh=19d4311c717fd944942d50944211b3f2&oe=5A6B9F19" height="20" width="20" alt="Person"> Glamars <span class="badge pull-right">20+</span></a></li>
+            <li role="presentation"><a data-toggle="#" title="Heart Confessions" href="#"><img src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p200x200/20479702_502722100072114_3336104281686787646_n.jpg?oh=7001c91ea3bbb899451c94f204427f53&oe=5A7342C2" height="20" width="20" alt="Person">Heart Confessions <span class="badge pull-right">3</span></a></li>
+              <p class="list-heading">Explore</p>
+            <li role="presentation"><a data-toggle="#" title="Events" href="#"><i class="fa fa-calendar-o" aria-hidden="true"></i> Events</a></li>
+            <li role="presentation"><a data-toggle="#" title="Groups" href="#"><i class="fa fa-users" aria-hidden="true"></i> Groups</a></li>
+            <li role="presentation"><a data-toggle="#" title="Saved" href="#"><span class="glyphicon glyphicon-bookmark"></span> Saved <span class="badge pull-right">20+</span></a></li>
+            <li role="presentation"><a data-toggle="#" title="Friend Lists" href="#"><i class="fa fa-address-book-o" aria-hidden="true"></i> Friend Lists</a></li>
+            <li role="presentation"><a data-toggle="#" title="On This Day" href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> On This Day <span class="badge pull-right">2</span></a></li>
+            <li role="presentation"><a data-toggle="#" title="Pokes" href="#"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Pokes</a></li>
+            <li role="presentation"><a data-toggle="#" title="Pages Feed" href="#"><span class="glyphicon glyphicon-duplicate"></span> Pages Feed <span class="badge pull-right">20+</span></a></li>
+            <li role="presentation"><a data-toggle="#" title="Games Feed" href="#"><i class="fa fa-gamepad" aria-hidden="true"></i> Games Feed</a></li>
             <p class="list-heading">Create</p>
-            <li role="presentation"><span class="size"><a href="https://www.facebook.com/ads/manager/creation/creation/?act=1416247295366988&campaign_id=433405496710037&placement=bkmk_adcr&extra_1=campaign">Ad</a> · <a href="https://www.facebook.com/pages/create/?ref_type=bookmark">Page</a></span></li>
+            <li role="presentation"><span class="size"><a href="#">Ad</a> · <a href="#">Page</a> · <a href="#">Group</a> · <a href="#">Event</a></span></li>
           </ul>
         </div></section>
-      <section class="col-md-6  col-sm-12 ">
-        <div class="post-section">
-        <div class="panel panel-default box-margin">
-                <div class="panel-heading" id="coloum1">
-                    <div class="media-left" id="coloum1-1">
-                       <span class="span1"><i class="fa fa-pencil" aria-hidden="true"></i> <b class="text-muted">Compose Post</b> <span class="vertical-line"></span></span>
-                       <span class="span2"><i class="fa fa-camera" aria-hidden="true"></i> <b>Photo/Video Album</b> <span class="vertical-line"></span></span>
-                       <span class="span2"><i class="fa fa-video-camera" aria-hidden="true"></i> <b>Live Video</b> </span>
-                    </div>
-                </div>
-                <div class="panel-body" id="top">
-                    <div>
-                        <div class="media-left">
-                            <a href="#">
-                                <img src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p160x160/22281756_143734422908472_5661405836853142890_n.jpg?oh=a1b7b54fe605361c6a10a392c6e11708&oe=5A78DBA4" alt="Person" width="40" height="40">
-                            </a>
-                        </div>
-                        <div class="media-body text-muted ">
-                            <span id="update"class="text-muted">Share an update Niharika</span>
-                        </div>
-                    </div>
-                    <div class="panel-footer background-color">
+      <section class="col-md-6  col-sm-8 "><div class="post-section">
+        <div class="panel panel-default card-margin mpcolor">
+          <div class="panel-heading"><div class="media-left">
+            <span class="makepost-1"><i class="fa fa-pencil" aria-hidden="true"></i> <b>Compose Post</b> <span class="vertical-line"></span></span>
+            <span data-toggle="#" title="Choose a file to upload" class="makepost-2"><i class="fa fa-picture-o" aria-hidden="true"></i> <b>Photo/Video Album</b> <span class="vertical-line"></span></span>
+            <span class="makepost-2"><i class="fa fa-video-camera" aria-hidden="true"></i> <b>Live Video</b> </span>
+          </div></div>
+          <div class="panel-body">
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <img src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p160x160/22281756_143734422908472_5661405836853142890_n.jpg?oh=a1b7b54fe605361c6a10a392c6e11708&oe=5A78DBA4" height="32" width="32" alt="Person">
+                                    </a>
+                                </div>
+                                <div data-toggle="#" title="What's on your mind?" class="media-body text-muted">
+                                    <span> Share an update Niharika.</span>
+                                </div>
+                            </div><hr></div>
+                    <div class="panel-footer">
                         <span>
-                            <button class="btn1"><span><i class="fa fa-camera" aria-hidden="true"></i> <b>Photo/Video</b></span></button>
-                            <button class="btn2"><span><i class="fa fa-smile-o" aria-hidden="true"></i> <b>Feeling/Activity</b></span></button>
-                            <button class="btn3"><span> <b> • • • </b></span></button>
+                            <button data-toggle="#" title="Choose a file to upload" class="mp1"><span><i class="fa fa-picture-o" aria-hidden="true"></i> <b>Photo/Video</b></span></button>
+                            <button class="mp2"><span><i class="fa fa-smile-o" aria-hidden="true"></i> <b>Feeling/Activity</b></span></button>
+                            <button class="mp3"><span> <b> • • • </b></span></button>
                         </span>
                     </div>
                 </div>
-
+        <div class="panel panel-default card-margin">
+          <div class="panel-heading"><div class="media-left">
+              <a href="#">
+                  <img src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/c0.0.32.32/p32x32/16681606_1183842308400641_2883187952243974313_n.jpg?oh=935b2608b3509885c1678d8b78047aff&oe=5A849E4A" height="32" width="32" alt="Person">
+              </a>
+          </div>
+          <div class="media-body">
+              <span><a href="#">
+                  <b>Rohit Bhutani</b></a>
+              </span>
+              <div class="like-toolkit">
+                  <span data-toggle="#" title="Wednesday, October 18, 2017 at 12:23pm" class="text-muted ">10 mins</span>
+                  <span class="text-muted">&#8226</span>
+                  <span data-toggle="tooltip" title="Public" class="text-muted glyphicon glyphicon-globe"></span>
+              </div>
+          </div>
+          <div class="media-right">
+            <span class="text-muted">&#8226&#8226&#8226</span>
+          </div>
+          <div class="panel-body">
+              <div>
+                <h3 class="text-post">
+                  "The most important
+        thing in life is to
+        learn how to give out love,
+        and to let it come in."
+                </h3>
+              </div><hr>
+            <div>
+            <span>
+              <span><i data-toggle="#" title="React" style="color:#365899;" class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+              <span data-toggle="#" title="React" style="color:#365899;">Like</span>
+            </span>
+            <span>
+              <span data-toggle="#" title="Leave a comment" class="text-muted glyphicon glyphicon-comment"></span>
+              <span data-toggle="#" title="Leave a comment" class="text-muted">Comment</span>
+            </span>
+            <span>
+              <span data-toggle="#" title="Send this to friends or post it on your timeline" class="text-muted glyphicon glyphicon-share-alt"></span>
+              <span data-toggle="#" title="Send this to friends or post it on your timeline" class="text-muted">Share</span>
+            </span>
             </div>
+           </div></div>
+           <div class="panel-footer"><div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p32x32/19399167_1326680807453293_6337418884429237994_n.jpg?oh=78a44cc6b3ec1527b3579747582ae1c4&oe=5A71D792" height="32" width="32" alt="Person">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <span><a href="#">
+                                    <b>Prateek Srivastava</b></a>
+                                </span>
+                                <span>absolutely correct..! </span>
+                                <div class="like-comment-toolkit">
+                                    <span><a href="">Like</a></span>
+                                    <span class="text-muted">&#8226</span>
+                                    <span><a href="">Reply</a></span>
+                                    <span class="text-muted">&#8226</span>
+                                    <span class="text-muted ">2 mins</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media">
+                                            <div class="media-left">
+                                                <a href="#">
+                                                    <img src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p32x32/22279739_459837574412456_4629992143192274598_n.jpg?oh=3922cf489657b871a9b4890cd8a67014&oe=5A76CD9D" height="32" width="32" alt="Person">
+                                                </a>
+                                            </div>
+                                            <div class="media-body">
+                                                <span><a href="#">
+                                                    <b>Somit Rastogi</b></a>
+                                                </span>
+                                                <span>Correct... </span>
+                                                <div class="like-comment-toolkit">
+                                                    <span><a href="">Like</a></span>
+                                                    <span class="text-muted">&#8226</span>
+                                                    <span><a href="">Reply</a></span>
+                                                    <span class="text-muted">&#8226</span>
+                                                    <span class="text-muted ">1 min</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img src="https://www.facebook.com/search/async/profile_picture/?fbid=100003246488908&width=72&height=72" height="32" width="32" alt="Person">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <input type="text" class="input-commentbox" placeholder="Write a comment..">
+                            </div>
+                        </div>
+                    </div></div>
+        <div class="panel panel-default card-margin">
+                      <div class="panel-heading"><div class="media-left">
+                          <a href="#">
+                              <img src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p160x160/21462389_1409253962528285_8886759849833231131_n.jpg?oh=7783d8af0b6a3d0a8332b29837100780&oe=5A779126" height="32" width="32" alt="Person">
+                          </a>
+                      </div>
+                      <div class="media-body">
+                          <span><a href="#">
+                              <b>Kriti Singhal</b></a>
+                          </span>
+                          <div class="like-toolkit">
+                            <span data-toggle="#" title="Wednesday, October 18, 2017 at 12:13pm" class="text-muted ">15 min</span>
+                            <span class="text-muted">&#8226</span>
+                            <span data-toggle="tooltip" title="Shared with: Public" class="text-muted glyphicon glyphicon-globe"></span>
+                          </div>
+                      </div>
+                      <div class="media-right">
+                        <span class="text-muted">&#8226&#8226&#8226</span>
+                      </div>
+                      <div class="panel-body">
+            <div class="img-post">
+              <img src="http://www.whatsappstatus77.in/wp-content/uploads/2015/06/a6bfcc9036214c844f15a212fa85bcce.jpg" class="img-responsive" alt="Responsive image">
+            </div>
+            <div>
+            <span>
+              <span><i data-toggle="#" title="React" style="color:#365899;" class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+              <span data-toggle="#" title="React" style="color:#365899;">Like</span>
+            </span>
+            <span>
+              <span data-toggle="#" title="Leave a comment" class="text-muted glyphicon glyphicon-comment"></span>
+              <span data-toggle="#" title="Leave a comment" class="text-muted">Comment</span>
+            </span>
+            <span>
+              <span data-toggle="#" title="Send this to friends or post it on your timeline" class="text-muted glyphicon glyphicon-share-alt"></span>
+              <span data-toggle="#" title="Send this to friends or post it on your timeline" class="text-muted">Share</span>
+            </span>
+            </div>
+         </div></div>
+         <div class="panel-footer"><div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/c0.0.160.160/p160x160/21432761_1895064607421969_7126131212821673984_n.jpg?oh=c6be1b48715373e05e0ecdab101499dc&oe=5A85AAE4" height="32" width="32" alt="Person">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <span><a href="#">
+                                    <b>Riya Aggarwal</b></a>
+                                </span>
+                                <span>right...</span>
+                                <div class="like-comment-toolkit">
+                                    <span><a href="">Like</a></span>
+                                    <span class="text-muted">&#8226</span>
+                                    <span><a href="">Reply</a></span>
+                                    <span class="text-muted">&#8226</span>
+                                    <span class="text-muted ">9 mins</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p160x160/21462389_1409253962528285_8886759849833231131_n.jpg?oh=7783d8af0b6a3d0a8332b29837100780&oe=5A779126" height="32" width="32" alt="Person">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <input type="text" class="input-commentbox" placeholder="Write a comment..">
+                            </div>
+                        </div>
+                    </div></div>
+        <div class="panel panel-default card-margin">
+                      <div class="panel-heading"><div class="media-left">
+                          <a href="#">
+                              <img src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p160x160/13494766_1019714034777489_6829036061925458505_n.jpg?oh=9a34359a034147902aadd393eaecc775&oe=5A631173" height="32" width="32" alt="Person">
+                          </a>
+                      </div>
+                      <div class="media-body">
+                          <span><a href="#">
+                              <b>Ashutosh Gupta</b></a>
+                          </span>
+                          <div class="like-toolkit">
+                            <span data-toggle="#" title="Wednesday, October 18, 2017 at 12:08pm" class="text-muted ">25 min</span>
+                            <span class="text-muted">&#8226</span>
+                            <span data-toggle="tooltip" title="Shared with: Public" class="text-muted glyphicon glyphicon-globe"></span>
+                          </div>
+                      </div>
+                      <div class="media-right">
+                        <span class="text-muted">&#8226&#8226&#8226</span>
+                      </div>
+            <div class="panel-body">
+            <div class="img-post">
+            <img src="https://i0.wp.com/www.thefreshquotes.com/wp-content/uploads/2016/06/The-Saddest-Thing-Is-When-You-Are-Feeling-Real-DownYou-Look-Around-And-Realize-That-There-Is-No-Shoulder-For-You..png?resize=333%2C500&ssl=1"class="img-responsive" alt="Responsive image">
+            </div>
+            <div>
+            <span>
+              <span><i data-toggle="#" title="React" style="color:blue;" class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+              <span data-toggle="#" title="React" style="color:blue;">Like</span>
+            </span>
+            <span>
+              <span data-toggle="#" title="Leave a comment" class="text-muted glyphicon glyphicon-comment"></span>
+              <span data-toggle="#" title="Leave a comment" class="text-muted">Comment</span>
+            </span>
+            <span>
+              <span data-toggle="#" title="Send this to friends or post it on your timeline" class="text-muted glyphicon glyphicon-share-alt"></span>
+              <span data-toggle="#" title="Send this to friends or post it on your timeline" class="text-muted">Share</span>
+            </span>
+            </div></div>
+           </div>
+            <div class="panel-footer">
+             <div class="media">
+                              <div class="media-left">
+                                  <a href="#">
+                                      <img src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-0/p110x80/13709840_269122223454610_1867262732794210095_n.jpg?oh=8394ad76e8236c5f3f63d0aafb737efd&oe=5A757219" height="32" width="32" alt="Person">
+                                  </a>
+                              </div>
+                              <div class="media-body">
+                                  <span><a href="#">
+                                      <b>Kartik Sharma</b></a>
+                                  </span>
+                                  <span>hahahahaaaa...😂😂 </span>
+                                  <div class="like-comment-toolkit">
+                                      <span><a href="">Like</a></span>
+                                      <span class="text-muted">&#8226</span>
+                                      <span><a href="">Reply</a></span>
+                                      <span class="text-muted">&#8226</span>
+                                      <span class="text-muted ">18 mins</span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="media">
+                              <div class="media-left">
+                                  <a href="#">
+                                      <img src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p160x160/13494766_1019714034777489_6829036061925458505_n.jpg?oh=9a34359a034147902aadd393eaecc775&oe=5A631173" height="32" width="32" alt="Person">
+                                  </a>
+                              </div>
+                              <div class="media-body">
+                                  <input type="text" class="input-commentbox" placeholder="Write a comment..">
+                              </div>
+                          </div>
+                      </div></div>
+                                  <div id="loading"></div>
+    </div></section>
+      <section class="col-md-3 hidden-xs col-sm-4"><div class="ads">
+        <div class="panel panel-default card-margin"><div class="panel-heading">
+          <div class="media-left"><h5 class="t"><b>Profiles</b></h5></div>
+          <div class="media-body ques"><span style="background-color:white !important;" class="ques badge pull-right"><i class="fa fa-question-circle" aria-hidden="true" data-toggle="tooltip" title="Profiles are information of a friend that last permanently."></i></span></div>
+            <div class="panel-body scrollmenu">
+              <div class="media-left">
+                <a href="#" data-toggle="tooltip" title="Richa Rastogi">
+                  <img class="media-object stories" src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-9/22552307_126502261390097_8319364958922702046_n.jpg?oh=6ec13b9a3dc0fb4635eda5ef77a873fd&oe=5A7CC212" height="40" width="40" alt="Person">
+                </a><p>Richa</p>
+                        </div>
+              <div class="media-left">
+                <a href="#" data-toggle="tooltip" title="Jiya Singh">
+                  <img class="media-object stories" src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-0/p110x80/20915421_1887324718195958_1147595592133973851_n.jpg?oh=ca6433285eec374123338073c5ee9b8c&oe=5AAFA7A5" height="40" width="40" alt="Person">
+                </a><p>Jiya</p>
+                        </div>
+              <div class="media-left">
+                <a href="#" data-toggle="tooltip" title="Arpit Sharma">
+                  <img class="media-object stories" src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-9/22549495_1964452477126113_8309884047450784378_n.jpg?oh=7951a2280c86f1d45a7132d2e82c497b&oe=5A6C9100" height="40" width="40" alt="Person">
+                </a><p>Arpit</p>
+                        </div>
+                      </div>
+          </div></div>
+          <div class="panel panel-default card-margin"><div class="panel-body">
+            <div class="media-left gift">
+            <a href="https://www.facebook.com/events/birthdays/"><i class="fa fa-gift" aria-hidden="true"></i><b>Birthdays</b></a></div></div></div>
+          <div class="panel panel-default card-margin"><div class="panel-heading">
+            <div class="media-left"><h5 class="t"><b>Events</b></h5></div>
+            </div>
+            <div class="panel-body">
 
-          <div class="panel panel-default">
-       <div class="panel-heading">
-       <h3 class="panel-title">
-           <img class="images" src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p160x160/22141072_701329486722846_2017151546166474631_n.jpg?oh=bb0bda42aea08f4d166604b71540310f&oe=5A645269" alt="some image">
-       <a href="#">Aaruhi Gupta</a>
-       </h3>
-     </div>
-     <div class="panel-body">
-       <div class="panel-body">
-         <div class="image-post">
-           <img src="https://quotes.values.com/quote_artwork/7171/medium/20171013_friday_quote.jpg?1507850523" class="img-responsive" alt="Responsive image">
-         </div>
-       </div>
-       <div>
-         <span>
-           <span class="glyphicon glyphicon-thumbs-up">
-           </span>Like</span>
-         </span>
-           <span class="glyphicon glyphicon-comment">
-           </span>Comment</span>
-         </span>
-       </div>
-     </div>
-     <div class="panel-footer"><div class="media">
-     <div class="media-left">
-       <a href="#">
-         <img class="images" src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p100x100/22405634_795726600609454_7911460089940610517_n.jpg?oh=2efa4af6b1350d5b158d4991dd717ed3&oe=5A6EB6D9" alt="some image">
-       </a>
-     </div>
-     <div class="media-body">
-       <span><a href="#">
-     <b>Naina Sharma</b>
-       </a></span>
-       <span>right!!!</span>
-       <div class="comments-toolkit">
-     <span><a href="#">Like</a></span>
-     <span><a href="#">Comment</a></span>
-     <span class="text-muted"> 12 mins</span>
-   </div>
-   </div>
- </div>
- <div class="media-left">
-     <a href="#">
-       <img class="images" src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-0/s160x160/22519528_2030391883861750_6775034174548990296_n.jpg?oh=3a139b4d9fb6790924036bfb9f449393&oe=5A69392B" alt="some image">
-     </a>
- </div>
-   <div class="media-body">
-     <span><a href="#">
-   <b>Vaibhav Arora</b>
-     </a></span>
-     <span>Absolutely...</span>
-     <div class="comments-toolkit">
-   <span><a href="#">Like</a></span>
-   <span><a href="#">Comment</a></span>
-   <span class="text-muted"> 18 mins</span>
- </div>
- </div>
-   <div class="media">
-   <div class="media-left">
-       <img class="images" src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p160x160/22141072_701329486722846_2017151546166474631_n.jpg?oh=bb0bda42aea08f4d166604b71540310f&oe=5A645269" alt="some image">
-     </a>
-   </div>
-   <div class="media-body">
-     <input type="text" class="comment-box" placeholder=" Write a comment...">
- </div>
- </div>
-   </div>
- </div>
-   <div class="panel panel-default">
-   <div class="panel-heading">
-   <h3 class="panel-title">
-       <img class="images" src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-0/p110x80/22089235_1940787409509852_4322207308046651361_n.jpg?oh=9f77a4e38ec213f91b6a8db3ab6bfa94&oe=5A85258E" alt="some image">
-   <a href="#">Aditya Rastogi</a>
-   </h3>
- </div>
- <div class="panel-body">
-   <div class="panel-body">
-     <div class="image-post">
-       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnazj_cy7TlBjf8IQH0aUIqOZUySr0D_l5xhVrkK_jhdR0GhOGOw" class="img-responsive" alt="Responsive image">
-     </div>
-    </div>
-   <div>
-     <span>
-       <span class="glyphicon glyphicon-thumbs-up">
-       </span>Like</span>
-     </span>
-       <span class="glyphicon glyphicon-comment">
-       </span>Comment</span>
-     </span>
-   </div>
-   </div>
-   <div class="panel-footer"><div class="media">
-   <div class="media-left">
-     <a href="#">
-       <img class="images" src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p100x100/19059666_1983223341897508_7055961986805253387_n.jpg?oh=a9a88c168a2022e19bcf3230fb6069a4&oe=5A70F994" alt="some image">
-     </a>
-   </div>
-   <div class="media-body">
-     <span><a href="#">
-   <b>Siddhant Arora</b>
-     </a></span>
-     <span>hahaha...true..!</span>
-     <div class="comments-toolkit">
-   <span><a href="#">Like</a></span>
-   <span><a href="#">Comment</a></span>
-   <span class="text-muted"> 12 mins</span>
- </div>
- </div>
- </div>
- <div class="media-left">
-   <a href="#">
-     <img class="images" src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p100x100/21151592_1336247449825565_5816781324366799952_n.jpg?oh=ffd6119eaf905b210af9ab781f06b2af&oe=5A734023" alt="some image">
-   </a>
- </div>
- <div class="media-body">
-   <span><a href="#">
- <b>Ajay Kumar</b>
-   </a></span>
-   <span>shi h yrr...</span>
-   <div class="comments-toolkit">
- <span><a href="#">Like</a></span>
- <span><a href="#">Comment</a></span>
- <span class="text-muted"> 18 mins</span>
- </div>
- </div>
- <div class="media">
- <div class="media-left">
-     <img class="images" src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-0/p110x80/22089235_1940787409509852_4322207308046651361_n.jpg?oh=9f77a4e38ec213f91b6a8db3ab6bfa94&oe=5A85258E" alt="some image">
-   </a>
- </div>
- <div class="media-body">
-   <input type="text" class="comment-box" placeholder=" Write a comment...">
- </div>
- </div>
- </div>
- </div>
- <div class="panel panel-default">
- <div class="panel-heading">
- <h3 class="panel-title">
-     <img class="images" src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/c136.251.709.709/s100x100/16473687_1109886939122919_3659016178886704001_n.jpg?oh=9e1e55519d94b0472af1891cab68c1b3&oe=5A8078AC" alt="some image">
- <a href="#">Naman Rastogi</a>
- </h3>
- </div>
- <div class="panel-body">
- <div class="panel-body">
-   <div>
-     <h3 class="text-post">
- “Believe in yourself! Have faith in your abilities! Without a humble but reasonable confidence in your own powers you cannot be successful or happy.”
-      </h3>
-    </div>
-  </div>
- <div>
-   <span>
-     <span class="glyphicon glyphicon-thumbs-up">
-     </span>Like</span>
-   </span>
-     <span class="glyphicon glyphicon-comment">
-     </span>Comment</span>
-   </span>
- </div>
- </div>
- <div class="panel-footer"><div class="media">
- <div class="media-left">
-   <a href="#">
-     <img class="images" src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/c0.0.100.100/p100x100/22489654_511119372582689_6643826254673172148_n.jpg?oh=93f147ef5e844f4a082a4e5b528c51dc&oe=5A69A29B" alt="some image">
-   </a>
- </div>
- <div class="media-body">
-   <span><a href="#">
- <b>Siddhartha Shai</b>
-   </a></span>
-   <span>true..!</span>
-   <div class="comments-toolkit">
- <span><a href="#">Like</a></span>
- <span><a href="#">Comment</a></span>
- <span class="text-muted"> 12 mins</span>
- </div>
- </div>
- </div>
- <div class="media-left">
- <a href="#">
-   <img class="images" src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/c0.1.32.32/p32x32/15965728_1223490754385848_1622337921575208580_n.jpg?oh=d65b91af3a0ab8bebce20d1497ad6282&oe=5A7CFE42" alt="some image">
- </a>
- </div>
- <div class="media-body">
- <span><a href="#">
- <b>Kumar Rajpoot</b>
- </a></span>
- <span>correct...</span>
- <div class="comments-toolkit">
- <span><a href="#">Like</a></span>
- <span><a href="#">Comment</a></span>
- <span class="text-muted"> 18 mins</span>
- </div>
- </div>
- <div class="media">
- <div class="media-left">
-   <img class="images" src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/c136.251.709.709/s100x100/16473687_1109886939122919_3659016178886704001_n.jpg?oh=9e1e55519d94b0472af1891cab68c1b3&oe=5A8078AC" alt="some image">
- </a>
- </div>
- <div class="media-body">
- <input type="text" class="comment-box" placeholder=" Write a comment...">
- </div>
- </div>
- </div>
- <a href="#" id="loadMore">Load More</a>
-   </div></section>
-   <section class="col-md-3 hidden-xs col-sm-4 ads ">
-    <div class="panel panel-default">
-                <div class="panel-heading box-margin">Events</div>
-                <div class="panel-body">
-                    <a href=""><span class="glyphicon glyphicon-gift"></span>Deepanshu's birthday is today. </a>
+
+                      <div class="panel-footer rang">
+                      <div class="media-left"><h5 class="text-muted ce">Create an Event for Your Page</h5></div>
+                      <div>
+                      <div class="media-left">
+                        <img class="eve" src="https://www.facebook.com/rsrc.php/v3/yx/r/TbFLAsUcT_W.png" height="60" width="60" alt="Person">
+                      </div>
+                      <div class="media-body">
+                          <div class="like-toolkit">
+                              <span style="font-size: 12px;">Make it easy for people to find your next event. Create it on Facebook.</span>
+                          </div>
+                          <div>
+                            <button data-toggle="#" title="Create Event"  class="ceb">Create Event</button>
+                          </div>
+                      </div>
+                    </div></div>
+                  </div>
+                </div>
+        <div class="panel panel-default card-margin"><div class="panel-heading">
+          <div class="media-left"><h5 class="t"><b>Your Pages</b></h5></div>
+          </div>
+          <div class="panel-body">
+            <div class="media-left">
+              <a href="#"><img class="pg1" src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p200x200/22196332_121444608553379_7528317298127792928_n.jpg?oh=fcdce0de86a9ded93a21fc50282ad719&oe=5A640599" height="60" width="60" alt="Person"></a>
+            </div>
+            <div class="media-body">
+                <span><a href="#">
+                    <b>Kuch Ankahi Kahaniyan</b></a>
+                </span>
+                <div class="like-toolkit">
+                    <a href="#"><i class="fa fa-comments" aria-hidden="true"></i><span class="text-muted "> Messages</span><span style="border-radius:0; background-color:white !important;" class="badge pull-right">5</span></a>
+                </div>
+                <div class="like-toolkit">
+                  <a href="#"><i style="color:black; margin-left:1px;" class="fa fa-globe" aria-hidden="true"></i><span class="text-muted "> Notification</span><span style="border-radius:0; background-color:white !important;" class="badge pull-right">10+</span></a>
+                </div>
+            </div><hr>
+        </div></div>
+        <div class="panel panel-default card-margin"><div class="panel-body">
+
+            <div class="media-left"><h5 class="t"><b>Trending</b></h5></div>
+            <div class="media-right"><ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tooltip" title="Top Trends" data-toggle="tab" href="#top-trends"><i class="fa fa-line-chart text-muted" aria-hidden="true"></i></a></li>
+                <li><a data-toggle="tooltip" title="Politics" data-toggle="tab" href="#politics"><i class="fa fa-university text-muted" aria-hidden="true"></i></a></li>
+                <li><a data-toggle="tooltip" title="Science and Technology" data-toggle="tab" href="#technology"><i class="fa fa-flask text-muted" aria-hidden="true"></i></a></li>
+                <li><a data-toggle="tooltip" title="Sports" data-toggle="tab" href="#sports"><i class="fa fa-futbol-o text-muted" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+          <div class="panel-body">
+            <div class="tab-content">
+                <div id="top-trends" class="tab-pane fade in active">
+                  <div><div class="media-left">
+                          <i class="fa fa-line-chart text-muted" aria-hidden="true"></i>
+                  </div>
+                  <div class="media-body">
+                      <span><a href="#">
+                          <b>Afganistan</b></a>
+                      </span>
+                          <p class="list-group-item-text">Suicide bombings in capital Kabul and Ghor province leave at least 70 dead, the latest in a series of attacks across the country</p><span style="color: darkgrey;">‑ timesofindia.indiatimes.com</span></p>
+                  </div></div>
+                  <div><div class="media-left">
+                          <i class="fa fa-line-chart text-muted" aria-hidden="true"></i>
+                  </div>
+                  <div class="media-body">
+                      <span><a href="#">
+                          <b>D.C.Circuit</b></a>
+                      </span>
+                          <p class="list-group-item-text">Appeals court delays abortion for undocumented teen; gives government time to find her a sponsor</p><span style="color: darkgrey;">‑ timesofindia.indiatimes.com</span></p>
+                  </div></div>
+                  <div><div class="media-left">
+                          <i class="fa fa-line-chart text-muted" aria-hidden="true"></i>
+                  </div>
+                  <div class="media-body">
+                      <span><a href="https://timesofindia.indiatimes.com/viral-news/twitter-flooded-with-memes-on-ranveers-khilji-look-kejriwal-becomes-special-target/articleshow/60922615.cms">
+                          <b>#Ranveer_Alauddin_Khilji trending</b></a>
+                      </span>
+                          <p class="list-group-item-text">Twitter flooded with memes on Ranveer's Khilji look, Kejriwal becomes special target</p><span style="color: darkgrey;">‑ timesofindia.indiatimes.com</span></p>
+                  </div></div>
+                  <div><div class="media-left">
+                          <i class="fa fa-line-chart text-muted" aria-hidden="true"></i>
+                  </div>
+                  <div class="media-body">
+                      <span><a href="https://timesofindia.indiatimes.com/india/pakistan-violates-ceasefire-for-2nd-consecutive-day-along-loc-in-jk/articleshow/61063348.cms">
+                          <b>Ceasefire Violation</b></a>
+                      </span>
+                          <p class="list-group-item-text">Pakistan violates ceasefire for 2nd consecutive day along LoC in J&K</p><span style="color: darkgrey;">‑ timesofindia.indiatimes.com</span></p>
+                  </div></div></div>
+                <div id="politics" class="tab-pane fade">
+                  <div><div class="media-left">
+                          <i class="fa fa-university text-muted" aria-hidden="true"></i>
+                  </div>
+                  <div class="media-body">
+                      <span><a href="https://timesofindia.indiatimes.com/india/why-election-commission-didnt-announce-gujarat-assembly-poll-dates/articleshow/61064735.cms">
+                          <b>EC decide to delay announcing the dates for assembly elections in Gujarat</b></a>
+                      </span>
+                          <p class="list-group-item-text">Why Election Commission didn't announce Gujarat Assembly poll dates</p><span style="color: darkgrey;">‑ timesofindia.indiatimes.com</span></p>
+                  </div></div>
+                  <div><div class="media-left">
+                          <i class="fa fa-university text-muted" aria-hidden="true"></i>
+                  </div>
+                </div></div>
                 </div>
             </div>
-            <div class="panel panel-default">
-                        <div class="panel-heading box-margin">Pages</div>
-                        <div class="panel-body">
-
-                          <a href=""><img class="size-img" src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p100x100/14079579_284025908646346_6268511855493129475_n.jpg?oh=f5ce2072a3cc06df9fb12223f31e9068&oe=5A657FC8"> </a>
-                            <a href=""><img class="size-img" src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-0/c11.0.100.100/p100x100/995630_10204691979686312_4839137576918330115_n.jpg?oh=c95b347c88cc9de65318b9497cc7cb49&oe=5A80CDAF"> </a>
-                            <a href=""><img class="size-img" src="https://scontent.fagr1-1.fna.fbcdn.net/v/t1.0-1/p74x74/12235119_915264528551030_7514222586405138770_n.jpg?oh=fa79c10adec778b749aeb0e3aafa5e8e&oe=5A885661"> </a>
-                        </div>
-                    </div>
-         <div class="panel panel-default card-margin"><div class="panel-heading">
-             <span id="cont"><h class="media-left" class="trending text-muted">Trending</h>
-             <ul class="nav nav-tabs media-right">
-                 <li class="active"><a class="a" data-toggle="tab" href="#top-trends"><i class="fa fa-line-chart text-muted" aria-hidden="true"></i></a></li>
-                 <li><a class="a" data-toggle="tab" href="#politics"><i class="fa fa-university text-muted" aria-hidden="true"></i></a></li>
-                 <li><a class="a" data-toggle="tab" href="#sports"><i class="fa fa-futbol-o text-muted" aria-hidden="true"></i></a></li>
-             </ul>
-           </span>
-           <div class="panel-body">
-             <div class="tab-content">
-               <div id="trend" class="tab-pane fade in active">
-                               <div>
-                                 <div class="media-left">
-                                     <i class="fa fa-line-chart text-muted" aria-hidden="true"></i>
-                                 </div>
-                                 <div class="media-body">
-                                   <span>
-                                       <a href="https://www.facebook.com/topic/Harvey-Weinstein/111653195517462?source=whfrt&amp;position=1">
-                                       <b>John F. Kelly</b></a>
-                                   </span>
-                                   <p class="content">Kelly, in an unexpected and emotional appearance in the White House....<span style="color: darkgrey;"> ‑ msn.com</span></p>
-                                 </div>
-                               </div>
-                               <div>
-                                   <div class="media-left">
-                                       <i class="fa fa-line-chart text-muted" aria-hidden="true"></i>
-                                   </div>
-                                   <div class="media-body">
-                                   <span>
-                                       <a href="https://www.facebook.com/topic/Gurdaspur/107961215893379?source=whfrt&amp;position=2">
-                                       <b>Puerto Rico</b></a>
-                                   </span>
-                                       <p class="content">Trump also suggested that he wants repayment of any loans provided for reconstruction to...<span style="color: darkgrey;"> ‑ newindianexpress.com</span></p>
-                                   </div>
-                               </div>
-                               <div>
-                                   <div class="media-left">
-                                       <i class="fa fa-line-chart text-muted" aria-hidden="true"></i>
-                                   </div>
-                                   <div class="media-body">
-                                   <span>
-                                       <a href="https://www.facebook.com/topic/Somalia/108296349195094?source=wtfrt&amp;position=3">
-                                       <b>Nikki Haley</b></a>
-                                   </span>
-                                       <p class="content">We want to make sure that we put in debt and that is absolutely protect...<span style="color: darkgrey;"> ‑ latimes.com</span></p>
-                                   </div>
-                               </div>
-                               <div>
-                                   <div class="media-left">
-                                       <i class="fa fa-line-chart text-muted" aria-hidden="true"></i>
-                                   </div>
-                                   <div class="media-body">
-                                   <span>
-                                       <a href="https://www.facebook.com/topic/Met-Office/132716170098685?source=wtfrt&amp;position=4">
-                                       <b>Met office</b></a>
-                                   </span>
-                                       <p class="content">Weather warnings for UK as Hurricane Ophelia threatens 80mph gusts
-                                           <span style="color: darkgrey;"> ‑ the guardian.com</span></p>
-                                   </div>
-                               </div>
-                               <div>
-                                   <div class="media-left">
-                                       <i class="fa fa-line-chart text-muted" aria-hidden="true"></i>
-                                   </div>
-                                   <div class="media-body">
-                                   <span>
-                                       <a href="https://www.facebook.com/topic/Kerala/115115885170016?source=wtfrt&amp;position=8">
-                                       <b>Kerela</b></a>
-                                   </span>
-                                       <p class="content">Chaos at BJP’s election rally in Gujarat’s Mangrol<span style="color: darkgrey;"> ‑ msn.com</span></p>
-                                   </div>
-                               </div>
-                               <div>
-                                   <div class="media-left">
-                                       <i class="fa fa-line-chart text-muted" aria-hidden="true"></i>
-                                   </div>
-                                   <div class="media-body">
-                                   <span>
-                                       <a href="https://www.facebook.com/topic/Christine-Lagarde/109359972416567?source=wtfrt&amp;position=10">
-                                       <b>christine Lagarde</b></a>
-                                   </span>
-                                       <p class="content">After World Bank, IMF chief hails PM Modi's economic reforms;...<span style="color: darkgrey;"> ‑ latimes.com</span></p>
-                                   </div>
-                               </div>
-                           </div>
-                           <div id="politics" class="tab-pane fade">
-                                           <div>
-                                               <div class="media-left">
-                                                   <i class="fa fa-university text-muted" aria-hidden="true"></i>
-                                               </div>
-                                               <div class="media-body">
-                                               <span>
-                                                   <a href="https://www.facebook.com/topic/Joint-Comprehensive-Plan-of-Action/112261672119611?source=wtfrt&amp;position=1002">
-                                                   <b>Joint Comprehensive Plan Of Action</b></a>
-                                               </span>
-                                                   <p class="content">President Trump is Backing Out of the Iran Nuclclear deal. That could...<span style="color: darkgrey;"> ‑ msn.com</span></p>
-                                               </div>
-                                           </div>
-                                           <div>
-                                               <div class="media-left">
-                                                   <i class="fa fa-university text-muted" aria-hidden="true"></i>
-                                               </div>
-                                               <div class="media-body">
-                                               <span>
-                                                   <a href="">
-                                                   <b>Hertha BSC</b></a>
-                                               </span>
-                                                   <p class="content">Berlin Soccer Team Kneels Before Game In Show Of Support For NFL...<span style="color: darkgrey;"> ‑ msn.com</span></p>
-                                               </div>
-                                           </div>
-                                           <div>
-                                               <div class="media-left">
-                                                   <i class="fa fa-university text-muted" aria-hidden="true"></i>
-                                               </div>
-                                               <div class="media-body">
-                                               <span>
-                                                   <a href="https://www.facebook.com/topic/Larry-Flynt/109400012412477?source=wtfrt&amp;position=1003">
-                                                   <b>Larry Flint</b></a>
-                                               </span>
-                                                   <p class="content">Hustler found Larry Flint offers $10 million for dirt leading to...<span style="color: darkgrey;"> ‑ foxnews.com</span></p>
-                                               </div>
-                                           </div>
-                                       </div>
-                                       <div id="sports" class="tab-pane fade">
-                                                       <div>
-                                                           <div class="media-left">
-                                                               <i class="fa fa-futbol-o text-muted" aria-hidden="true"></i>
-                                                           </div>
-                                                           <div class="media-body">
-                                                           <span>
-                                                               <a href="https://www.facebook.com/topic/Roger-Federer/109600612399900?source=wtfrt&amp;position=4001">
-                                                               <b>Roger Federer</b></a>
-                                                           </span>
-                                                               <p class="content">Federer brushes out Nadal to win Shanghai Masters<span style="color: darkgrey;"> ‑ reuters.com</span></p>
-                                                           </div>
-                                                       </div>
-                                                       <div>
-                                                           <div class="media-left">
-                                                               <i class="fa fa-futbol-o text-muted" aria-hidden="true"></i>
-                                                           </div>
-                                                           <div class="media-body">
-                                                           <span>
-         <a href="https://www.facebook.com/topic/Hertha-BSC/103129159728076?source=wtfrt&amp;position=4002">
-        <b>Maria Sharapova</b></a>
-         </span>
-           <p class="content">Maria Sharapova beats Aryna Sabalenka to win Tianjim open Title<span style="color: darkgrey;"> ‑ bbc.com</span></p>
-       </div>
-       </div>
-       <div>
-      <div class="media-left">
-       <i class="fa fa-futbol-o text-muted" aria-hidden="true"></i>
+        </div></div>
+        <div class="panel panel-default card-margin"><div class="panel-body">
+          <div class="media-left"><span style="font-size: 13px;" class="text-muted lng">English (US) · <b data-toggle="#" title="Hindi">हिन्दी</b>· <b data-toggle="#" title="Punjabi">ਪੰਜਾਬੀ</b> · <b data-toggle="#" title="Urdu">اردو</b> · <b data-toggle="#" title="Nepali">नेपाली</b></span></div>
+          <div class="media-right"><button style="padding:0 10px;"class="uni3"><b>+</b></button></div>
+        </div></div>
+        <footer class="row footer"><div>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><a data-toggle="#" title="About products." href="https://newsroom.fb.com/products/">About</a></li>
+            <li role="presentation"><a data-toggle="#" title="Home" href="https://starboyalankarartist.github.io/fb">Home</a></li>
+            <li role="presentation"><a data-toggle="#" title="Learn about your privacy." href="https://www.facebook.com/privacy/explanation">Privacy</a></li>
+            <li role="presentation"><a data-toggle="#" title="Advertise" href="https://www.facebook.com/business/">Advertising</a></li>
+            <li role="presentation"><a data-toggle="#" title="Cookies" href="https://www.facebook.com/policies/cookies/">Cookies</a></li>
+            <li role="presentation"><a data-toggle="#" title="Learn about Ad Choices." href="https://www.facebook.com/help/568137493302217">Ad choices</a></li>
+          </ul>
         </div>
-         <div class="media-body">
-         <span>
-         <a href="https://www.facebook.com/topic/FIFA-U-17-World-Cup/106065102758490?source=wtfrt&amp;position=4004">
-         <b>Fifa U-17 World Cup</b></a>
-        </span>
-       <p class="content">Fifa U-17 World Cup: Pre Quarterfinal lineup and match schedule<span style="color: darkgrey;"> ‑ msn.com</span></p>
-       </div>
-           </div>
-               </div>
-        </div>
-       </div>
-     </div>
-
-</div>
-<footer class="row footer" id="footer"><div>
-    <ul class="nav nav-pills">
-        <li role="presentation"><a href="https://www.facebook.com/privacy/explanation">Privacy · </a></li>
-        <li role="presentation"><a href="https://www.facebook.com/policies?ref=pf">Terms · </a></li>
-        <li role="presentation"><a href="https://www.facebook.com/campaign/landing.php?placement=pf_rhc&campaign_id=242449722530626&extra_1=auto">Advertising · </a></li>
-        <li role="presentation"><a href="https://www.facebook.com/help/568137493302217">AdChoices · </a></li>
-        <li role="presentation"><a href="https://www.facebook.com/help/cookies?ref_type=sitefooter">Cookies · </a></li>
-        </ul>
-    <div><a href="#">Facebook © 2107</a></div>
-
-</div>
-</footer>
-      </section>
+        </footer>
+        <div><p class="footer-copyright ">@Facebook © 2017</p></div>
+      </div></section>
     </article>
   </div>
 </body>
